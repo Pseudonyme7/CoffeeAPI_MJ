@@ -1,6 +1,6 @@
 # Application de Contrôle de Machine à Café (Non fonctionnelle)
 
-Ce code est destiné à démontrer la manière que j'ai d'aborder la problèmatique du problème de la machine a café.
+Ce code est destiné à démontrer la manière que j'ai d'aborder la problèmatique de la machine a café.
 
 ## Fonctionnalités Principales
 
