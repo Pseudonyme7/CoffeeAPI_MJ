@@ -1,0 +1,21 @@
+<div class="control-panel">
+  <button mat-button (click)="turnOn()">Turn On</button>
+  <button mat-button (click)="turnOff()">Turn Off</button>
+
+  <div class="coffee-options">
+    <label
+      >Espresso Shots:
+      <input
+        type="number"
+        [(ngModel)]="coffeeOptions.numEspressoShots"
+        min="1"
+        max="5"
+      />
+    </label>
+    <label
+      >Add Milk:
+      <input type="checkbox" [(ngModel)]="coffeeOptions.addMilk" />
+    </label>
+  </div>
+  <button mat-button (click)="makeCoffee()">Make Coffee</button>
+</div>

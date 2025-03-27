@@ -1,0 +1,22 @@
+<div class="utilization-report">
+  <h2>Utilization Report</h2>
+  <table *ngIf="usageData.length > 0">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Cups</th>
+        <th>First Cup Time</th>
+        <th>Last Cup Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of usageData">
+        <td>{{ data.day }}</td>
+        <td>{{ data.cups }}</td>
+        <td>{{ data.firstCupTime }}</td>
+        <td>{{ data.lastCupTime }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="usageData.length === 0">No utilization data available.</p>
+</div>

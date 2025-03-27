@@ -1,0 +1,24 @@
+<div class="machine-status">
+  <h2>Machine Status</h2>
+  <div *ngIf="machineStatus">
+    <p>Status: {{ machineStatus?.isOn ? "On" : "Off" }}</p>
+    <p>Making Coffee: {{ machineStatus?.isMakingCoffee ? "Yes" : "No" }}</p>
+    <p *ngIf="machineStatus.isInAlertState">Alert: Check machine components!</p>
+    <div *ngIf="!machineStatus.isInAlertState">
+      <p>
+        Water Level:
+        {{ machineStatus?.waterLevelState === 0 ? "Okay" : "Alert" }}
+      </p>
+      <p>
+        Bean Feed: {{ machineStatus?.beanFeedState === 0 ? "Okay" : "Alert" }}
+      </p>
+      <p>
+        Waste Coffee:
+        {{ machineStatus?.wasteCoffeeState === 0 ? "Okay" : "Alert" }}
+      </p>
+      <p>
+        Water Tray: {{ machineStatus?.waterTrayState === 0 ? "Okay" : "Alert" }}
+      </p>
+    </div>
+  </div>
+</div>
